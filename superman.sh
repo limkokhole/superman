@@ -7,16 +7,16 @@
 #|\+ is for --gstabs+
 function superman () {
     if [[ "$1" == "-I" || "$1" == "-i" ]]; then
-        man "$2" | less -I -p "^[ ]+-*$3( |=|,|$|\[|\+)"
+        man "$2" | less -I -p "^[ ]+\"*-*$3( |=|,|$|\[|\+|\")"
     else
-        man "$1" | less -p "^[ ]+-*$2( |=|,|$|\[|\+)"
+        man "$1" | less -p "^[ ]+\"*-*$2( |=|,|$|\[|\+|\")"
     fi
 }
 function superinfo () {
     if [[ "$1" == "-I" || "$1" == "-i" ]]; then
-        info "$2" | less -I -p "^ *‘*'*-*\** *$3’*( |=|,|$|\[|:|'|\+)"
+        info "$2" | less -I -p "^ *‘*'*\"*-*\** *$3’*( |=|,|$|\[|:|'|\+|\")"
     else
-        info "$1" | less -p "^ *‘*'*-*\** *$2’*( |=|,|$|\[|:|'|\+)"
+        info "$1" | less -p "^ *‘*'*\"*-*\** *$2’*( |=|,|$|\[|:|'|\+|\")"
     fi
 }
 export -f superinfo
@@ -29,7 +29,7 @@ export sm
 This will work if i run superman -i gcc wl which means case-insensitive to jump into -Wl,option section. -Wl,option from gcc require ,. scaletempo from mplayer require [, and scale from mplayer require =
 SUPERMAN
 <<"SUPERINFO"
-Tested with superinfo gcc _HPPA, superinfo -i gcc werror, superinfo -i gcc wl, superinfo -i mplayer scaletempo, superinfo -i mplayer stats, superinfo -i ls f, superinfo -i ls -f. Unicode's LEFT SINGLE QUOTATION MARK ’ used by -f of ls.
+Tested with superinfo gcc _HPPA, superinfo -i gcc werror, superinfo -i gcc wl, superinfo -i mplayer scaletempo, superinfo -i mplayer stats, superinfo -i ls f, superinfo -i ls -f. Unicode's LEFT SINGLE QUOTATION MARK ’ used by -f of ls. \" used by binutils pkg various binaries
 p/s: 
 [1] si -i bash '!n'
 [2] `man type` got PATH with underline, but `si -i type path` able get it but no underline already, [further:0]
