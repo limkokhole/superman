@@ -9,7 +9,7 @@ How to use:
 $ chmod +x superman.sh; . superman.sh  
 
 [2]
-- Run as `superman -i gcc -Werror` (-i means case insensitive), OR `superinfo g++ c` OR `bashman history`.  
+- Run as `superman -i gcc Werror` (-i means case insensitive), OR `superinfo g++ c` OR `bashman history`.  Don't put hyphen, e.g. -Werror will skip some results if that option no hyphen
 - press 'N' OR <Shift+N> key to navigate.  
 - bashman means read shell builtin.  
 - enjoy :)  
