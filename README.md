@@ -14,7 +14,7 @@ $ chmod +x superman.sh; . superman.sh
 - bashman means read shell builtin.  
 - enjoy :)  
 
-Screencast:  
+Screencast (`sman` aliased to `superman`):  
 
 ![superman](/screencast.gif?raw=true "superman")  
 
